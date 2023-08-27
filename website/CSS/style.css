@@ -1,0 +1,526 @@
+/* Base styles for large computer screens */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.6rem;  /* Reduced padding */
+}
+
+.header__logo {
+    display: block;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    margin: 0 0.8rem;  /* Reduced margin */
+    text-decoration: none;
+    position: relative;
+    padding: 4px 0;
+}
+
+.nav__link:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;  /* Reduced height */
+    background-color: blue;
+}
+
+.header__title, 
+.header__subtitle {
+    position: absolute;
+    left: 1.6rem; /* Adjusted */
+    white-space: nowrap;
+    margin-top: 2.5rem; /* Adjusted */
+}
+
+.header__title {
+    top: 3.5rem; /* Adjusted */
+}
+
+.header__subtitle {
+    top: 5.2rem; /* Adjusted */
+    margin-top: 3.5rem; /* Adjusted */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    position: relative;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.location-icon-container {
+    background-color: grey;
+    padding: 8px;  /* Reduced padding */
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0065FC;
+    position: relative; 
+    border-radius: 20px;
+    max-width: 1.2cm;  /* Reduced width */
+    margin-top: 4.2rem;
+    margin-left: 1.6rem;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    background-color: #DEEBFF;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.location-icon-container {
+    background-color: grey;
+    padding: 8px;  /* Reduced padding */
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.search-input {
+    border: none;
+    flex-grow: 1;
+    padding: 8px;  /* Reduced padding */
+    outline: none;
+    border-radius: 20px;
+}
+
+.search-button-desktop {
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    padding: 8px 16px;  /* Reduced padding */
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.search-button-mobile {
+    display: none;
+}
+
+/* Desktop-specific styles for Filters */
+
+.filters {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 1.7em 0;  /* Reduced margin */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.filter-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2em;  /* Reduced margin */
+    font-weight: bold;
+    background-color: white;
+    border: 2.5px solid #F2F2F2;  /* Reduced border width */
+    width: auto;
+    height: 42px;  /* Reduced height */
+    border-radius: 30px;  /* Adjusted border-radius */
+    padding-right: 12px;  /* Reduced padding */
+}
+
+.filter-icon {
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    padding: 12px;  /* Reduced padding */
+    margin-right: 8px;
+    margin-left: -8px;
+}
+
+.child {
+    padding: 12px 15px;  /* Reduced padding */
+}
+
+.filter-info {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 1.7em 0;  /* Reduced margin */
+    display: flex;
+    align-items: baseline;
+}
+
+.info-icon {
+    color: #0065FC;
+    background-color: white;
+    border: 2.5px solid #f2f2f2;  /* Reduced border width */
+    border-radius: 100%;
+    padding: 4px 10px;  /* Reduced padding */
+    margin-right: 12px;  /* Reduced margin */
+    width: auto;
+}
+
+.info-text {
+    width: 340px;  /* Reduced width */
+}
+
+.container {
+    padding: 0 3%;
+    display: flex;
+    gap: 2%;
+}
+
+#accommodations {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: calc(70%);
+    background: #f2f2f2;
+    border-radius: 2%;
+    padding: 3%;
+    display: flex;
+}
+
+#accom-title, #show-more {
+    flex-basis: 100%;
+}
+
+#show-more:hover {
+    letter-spacing: 0.08em;
+    text-shadow: 2px 2px 4px rgba(33, 33, 33, 0.2);
+}
+
+#show-more a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.l-card, .card {
+    flex-basis: calc(33.333% - 2%);
+    min-width: 220px;
+    min-height: 250px;
+    max-height: 250px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.l-card {
+    background: white;
+    padding: 0.5em;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    margin: 1em 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5% 5% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 0.5em;
+}
+
+.hotel-name, .price, .stars {
+    margin: 0.5em 0;
+}
+
+.hotel-name {
+    font-weight: bold;
+}
+
+.stars {
+    color: #0065FC;
+}
+
+.pale-stars {
+    color: grey;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#accommodations {
+    flex: 1; /* Takes the major portion of the width */
+    width: 60%;
+}
+
+#most-popular {
+    flex-basis: 35%; /* Will occupy about 35% of container's width */
+    background-color: #f5f5f5; /* Grey background */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, but gives a nice depth effect */
+    border-radius: 10px; /* Rounded edges */
+}
+
+
+/* Tablet styles (between 768px and 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav__link:hover::before {
+        display: none; /* Disable the top blue line for tablet */
+    }
+
+    .nav__link:hover::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: blue;
+    }
+
+    .header__title {
+        position: static;
+        white-space: normal;
+        margin-top: 1rem; /* This will provide spacing from the navigation */
+    }
+
+    .header__subtitle {
+        position: static;
+        white-space: normal;
+        margin-top: 0.5rem; /* This will provide spacing between the title and subtitle */
+        margin-bottom: 0;
+    }
+
+    .search-form-desktop {
+        display: none;
+    }
+    
+    .search-form-mobile{
+        display: none;
+    }
+
+    .search-form-tablet {
+        display: block;
+        background-color: blue;
+        align-items: center;
+        border: none;
+        color: white;
+        padding: 10px;
+        margin-top: -1rem;
+    }
+
+}
+
+/* Mobile version adjustments (below 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 7px; /* Reduced padding for compactness */
+    }
+
+    .nav__link:hover::before {
+        display: none; /* Disable the top blue line for mobile */
+    }
+
+    .nav__link:hover::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: blue;
+    }
+
+    .header__title {
+        position: static;
+        white-space: normal;
+        margin-top: 0.5rem; /* Reduced spacing for compactness */
+        font-size: 20px; /* Reduced font size for compactness */
+    }
+
+    .header__subtitle {
+        position: static;
+        white-space: normal;
+        margin-top: 0.25rem; /* Reduced spacing for compactness */
+        margin-bottom: 0;
+        font-size: 16px; /* Reduced font size for compactness */
+    }
+
+    /* Mobile styles */
+    .search-form-desktop {
+        display: none;
+    }
+
+    .search-form-mobile {
+        display: block;
+        background-color: blue;
+        align-items: center;
+        border: none;
+        color: white;
+        padding: 8px; /* Reduced padding for compactness */
+        margin-top: -4rem; /* Adjusted space between subtitle and search bar */
+        font-size: 16px; /* Adjusted font size for compactness */
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns the items to the left */
+        font-size: 12px; /* Reduced font size */
+    }
+
+    .filter-button {
+        margin-left: 0; /* Resets the left margin */
+        margin-top: 0.5rem; /* Adds some vertical spacing between buttons */
+        height: auto;
+        max-height: 45px;
+        padding-right: 10px; /* Reduced padding */
+    }
+
+    .filter-icon {
+        padding: 10px; /* Reduced padding */
+        margin-right: 5px; 
+        margin-left: -5px; 
+    }
+
+    .child {
+        padding: 10px 12px; /* Reduced padding */
+    }
+
+    /* ID selectors for specific filter buttons */
+    #Low_Cost {  /* Note: CSS selectors cannot have spaces, so I replaced space with an underscore */
+        margin-right: 3%;
+        min-width: 45%;
+    }
+
+    #Romantic {
+        order: 2;
+        min-width: 25%;
+    }
+
+    #Family {
+        order: 3;
+    }
+
+    #Pets_allowed {  /* Again, replaced space with an underscore */
+        order: 4;
+        padding-right: 10vw; /* Reduced padding */
+    }
+
+    .filter-info {
+        font-size: 3vw; /* Adjusted font size */
+        padding-left: 4%; /* Adjusted padding */
+        padding-right: 4%;
+    }
+
+    .info-icon {
+        padding: 1.5vw 2.5vw; /* Reduced padding */
+        margin-right: 4%; 
+    }
+
+    .info-text {
+        width: auto;
+        font-size: 8px; /* Adjusted font size */
+    } 
+
+    .container {
+        flex-direction: column-reverse; /* Most Popular will come before Accommodations in Marseille */
+    }
+
+    #most-popular, #accommodations {
+        width: 100%; /* Each section takes the full width on mobile */
+        box-shadow: none; /* Remove shadow for mobile */
+    }
+
+    #most-popular {
+        padding: 0; /* Remove padding for mobile */
+    }
+
+}
+
+/* Card styles */
+.card, .a-pop-card {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.l-card, .popular-card {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.l-card:hover, .popular-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image, .pop-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-text, .pop-card-text {
+    margin-top: 10px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pale-stars {
+    opacity: 0.5;
+
+}
+
+
+
